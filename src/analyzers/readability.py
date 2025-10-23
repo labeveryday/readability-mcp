@@ -4,7 +4,7 @@ Provides various readability metrics and scoring functions
 """
 
 import textstat
-from typing import Dict, Any, Optional, List
+from typing import Any
 from src.models.results import ReadabilityResult
 
 
@@ -43,7 +43,7 @@ class ReadabilityAnalyzer:
         else:
             return "Graduate level"
     
-    def analyze(self, text: str, metrics: Optional[List[str]] = None) -> Dict[str, Any]:
+    def analyze(self, text: str, metrics: list[str] | None = None) -> dict[str, Any]:
         """
         Analyze text readability using multiple metrics
         

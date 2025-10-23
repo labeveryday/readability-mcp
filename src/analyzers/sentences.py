@@ -5,7 +5,7 @@ Identifies and analyzes complex sentences in text
 
 import textstat
 import nltk
-from typing import List, Dict, Any
+from typing import Any
 from src.models.results import DifficultSentence
 
 
@@ -20,7 +20,7 @@ class SentenceAnalyzer:
             nltk.download('punkt')
     
     @staticmethod
-    def analyze_sentence_difficulty(sentence: str) -> tuple[float, List[str]]:
+    def analyze_sentence_difficulty(sentence: str) -> tuple[float, list[str]]:
         """
         Analyze why a sentence is difficult
         
@@ -71,7 +71,7 @@ class SentenceAnalyzer:
         
         return grade_level, issues
     
-    def find_difficult_sentences(self, text: str, count: int = 5, threshold: float = 10.0) -> List[Dict[str, Any]]:
+    def find_difficult_sentences(self, text: str, count: int = 5, threshold: float = 10.0) -> list[dict[str, Any]]:
         """
         Find the most difficult sentences in the text
         

@@ -3,7 +3,7 @@ Data models for analysis results
 """
 
 from dataclasses import dataclass
-from typing import List, Dict, Any
+from typing import Any
 
 
 @dataclass
@@ -24,7 +24,7 @@ class DifficultSentence:
     text: str
     grade_level: float
     position: int
-    issues: List[str]
+    issues: list[str]
     word_count: int
     syllable_count: int
 
@@ -34,5 +34,5 @@ class AIDetectionResult:
     """Structure for AI pattern detection results"""
     ai_score: float
     confidence: str
-    patterns_found: List[Dict[str, Any]]
-    recommendations: List[str]
+    patterns_found: list[dict[str, Any]]
+    recommendations: list[str]
